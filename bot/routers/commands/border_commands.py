@@ -96,7 +96,7 @@ async def command_analyse_handler(message: types.Message) -> None:
                                          reply_markup=buttons())
                 del data[message.from_user.id]
         except AttributeError:
-            await message.answer(text="Не удалось подключиться к серверу...",
+            await message.answer(text="Не удалось подключиться к серверу... Попробуйте ещё раз /analyse",
                                  reply_markup=buttons())
         # Пользователь ввёл команду cancel
         except KeyError:
